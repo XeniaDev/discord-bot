@@ -24,9 +24,12 @@ Client.on('message',message=>{
     message.reply("Because it's weird");
   }else if (message.content == 'bayo!editable?'){
     message.reply("Why?");
-  }else if (message.content === 'what is my avatar?') {
+  }else if (message.content === 'what is my avatar url?') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
+  }else if (message.content === 'what is my username?') {
+    // Send the user's avatar URL
+    message.reply(message.author.username);
   }
 
 });
