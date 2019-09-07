@@ -22,7 +22,7 @@ Client.on('message',message=>{
     message.reply(""+item+"");
   }else if (message.content == 'bayo!whychangepfp?'){
     message.reply("Because it's weird");
-  }else if (message.content == 'bayo!can i edit you?'){
+  }else if (message.content == 'bayo!editable?'){
     message.reply("Why?");
   }
 
