@@ -17,11 +17,13 @@ Client.on('message',message=>{
   }else if (message.content == 'bayo!ily'){
     message.reply("oooh thank you! :heart:");
   }else if (message.content == 'bayo!speak'){
-    var items = Array("Ok",":eyes:","I don't like my pfp","I've no idea","What should i say now?","I have to drink coffee to speak", "I **really** need money, i need 100 Dollars!","By name is similar to @Sabah#7720 's username");
+    var items = Array("Ok",":eyes:","I don't like my pfp","I've no idea","What should i say now?","I have to drink coffee to speak", "I **really** need money, i need 100 Dollars!","By name is similar to BayoDino's username");
     var item = items[Math.floor(Math.random()*items.length)];
     message.reply(""+item+"");
   }else if (message.content == 'bayo!whychangepfp?'){
     message.reply("Because it's weird");
+  }else if (message.content == 'bayo!can i edit you?'){
+    message.reply("Why?");
   }
 
 });
