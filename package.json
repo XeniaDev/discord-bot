@@ -1,8 +1,14 @@
 {
-“name”: “bayotest”,
-“version”: “1.0.0”,
-“description”: “BayoDino's alpha bot”,
-“main”: “bayo.js”,
-“author”: “Sabah”,
-“dependencies”: {}
+  "name": "BayoTest",
+  "description": "BayoDino's alpha bot",
+  "version": "1.0.0",
+  "main": "bayo.js",
+  "author": "Sabah & Haru",
+  "scripts": {
+    "start": "node bayo.js"
+  },
+  "dependencies": {
+    "discord.js": "2.5.3",
+    "winston": "3.2.1"
+  }
 }
