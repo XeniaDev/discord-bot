@@ -24,11 +24,7 @@ Client.on('message',message=>{
     message.reply("Because it's weird");
   }else if (message.content == 'bayo!editable?'){
     message.reply("Why?");
-  }else if (message.reply(Client.user.toString())) {
-        // Send acknowledgement message
-        message.channel.send("Ping " +
-            message.author.toString() + ": " + message.content)
-    }
+  }
 
 });
 
