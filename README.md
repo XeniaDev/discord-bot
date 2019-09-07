@@ -1,1 +1,1 @@
-# discord-bot
+# BayoTest - A Discord bot for Cranterns
