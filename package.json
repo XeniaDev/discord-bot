@@ -1,0 +1,8 @@
+{
+“name”: “bayotest”,
+“version”: “1.0.0”,
+“description”: “BayoDino's alpha bot”,
+“main”: “bayo.js”,
+“author”: “Sabah”,
+“dependencies”: {}
+}
