@@ -15,7 +15,7 @@ Client.on('message',message=>{
     message.reply('Thanks for waiting for me ergastolator1!');
   }
   if (message.content == 'bayo!help'){
-    message.reply('I/'m a very basic bot made by BayoDino and Haruyuki and Ergastolator1. I/'ll become a helper for Cranterns bot ^-^');
+    message.reply("I/'m a very basic bot made by BayoDino and Haruyuki and Ergastolator1. I/'ll become a helper for Cranterns bot ^-^");
   }
 });
 
