@@ -7,8 +7,10 @@
   "scripts": {
     "start": "node bayo.js"
   },
-  "dependencies": {
-    "discord.io": "2.5.3",
-    "winston": "3.2.1"
+    "dependencies": {
+      "discord.js": "11.5.1",
+      "winston": "3.2.1",
+      "request": "2.81.0"
+    }
   }
-}
+
