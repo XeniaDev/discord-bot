@@ -1,9 +1,6 @@
 const Discord = require('discord.js');
 const Client = new Discord.Client();
 
-Client.on('ready',()=>{
-Client.user.setActivity("with JavaScript")
-}
 Client.on('message',message=>{
   if (message.content == 'bayo!hi'){
    message.reply('wait am i working?');
