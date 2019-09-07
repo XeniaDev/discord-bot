@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const Client = new Discord.Client();
 
 Client.on('ready',()=>{
-client.user.setActivity("with JavaScript")
+Client.user.setActivity("with JavaScript")
 }
 Client.on('message',message=>{
   if (message.content == 'bayo!hi'){
