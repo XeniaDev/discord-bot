@@ -24,6 +24,9 @@ Client.on('message',message=>{
     message.reply("Because it's weird");
   }else if (message.content == 'bayo!editable?'){
     message.reply("Why?");
+  }else if (message.content === 'bayo!what is my avatar?') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
   }
 
 });
