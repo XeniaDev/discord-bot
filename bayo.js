@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const Client = new Discord.Client();
 
 Client.on('message',message=>{
+  if (message.startsWith('bayo!')){
   if (message.content == 'bayo!hi'){
    message.reply('wait am i working?');
   }
@@ -17,6 +18,7 @@ Client.on('message',message=>{
   if (message.content == 'bayo!help'){
     message.reply("I'm a very basic bot made by BayoDino and Haruyuki and Ergastolator1. I'll become a helper for Cranterns bot ^-^");
   }
+}
 });
 
 Client.login(process.env.BOT_TOKEN);
