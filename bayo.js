@@ -16,8 +16,10 @@ Client.on('message',message=>{
     message.reply("Why are you confused?");
   }else if (message.content == 'bayo!ily'){
     message.reply("oooh thank you! :heart:");
-  }else if (message.content == '@BayoTest '){
-    message.reply("Any thing i can help you with?");
+  }else if (message.content == 'bayo!speak'){
+    var items = Array("Ok",":eyes:","I don't like my pfp");
+    var item = items[Math.floor(Math.random()*items.length)];
+    message.reply(item);
   }
 
 });
