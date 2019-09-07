@@ -12,7 +12,7 @@ Client.on('message',message=>{
     message.reply('Yes I\'m running off Heroku!');
   }
   if (message.content == 'ergastolator1'){
-    message.reply('Thanks for waiting for me!');
+    message.reply('Thanks for waiting for me ergastolator1!');
   }
 });
 
