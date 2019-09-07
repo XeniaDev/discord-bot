@@ -16,7 +16,7 @@ Client.on('message',message=>{
     message.reply("Why are you confused?");
   }else if (message.content == 'bayo!ily'){
     message.reply("oooh thank you! :heart:");
-  }else if (message.content == '@BayoTest#4081 '){
+  }else if (message.content == '@BayoTest '){
     message.reply("Any thing i can help you with?");
   }
 
