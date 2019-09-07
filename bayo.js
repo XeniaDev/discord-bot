@@ -15,7 +15,7 @@ Client.on('message',message=>{
   }else if (message.content == 'bayo!confused'){
     message.reply("Why are you confused?");
   }else if (message.content == 'bayo!ily'){
-    message.reply("oooh thank you!");
+    message.reply("oooh thank you! :heart:");
   }
 
 });
