@@ -1,30 +1,39 @@
 {
-  "name": "BayoTest",
-  "description": "BayoDino's alpha bot",
+  "name": "bayotest",
   "version": "1.0.0",
-  "main": "bayo.js",
-  "author": "Sabah & Haru",
-  "homepage": "http://cranterns.epizy.com/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HaruStar/discord-bot.git"
+  "description": "A Cranterns Discord bot",
+  "main": "bayotest.js",
+  "dependencies": {
+    "@discordjs/uws": "10.149.0",
+    "@keyv/mysql": "^1.1.4",
+    "bufferutil": "^4.0.0",
+    "discord.js": "^11.5.1",
+    "erlpack": "0.1.2",
+    "keyv": "^3.1.0",
+    "node-opus": "^0.3.2",
+    "opusscript": "^0.0.7"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0"
+  },
+  "scripts": {
+    "start": "node bayotest.js",
+    "start_local": "node -r dotenv/config bayotest.js"
   },
   "engines": {
     "node": "10.x"
   },
-  "scripts": {
-    "start": "node bayo.js"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harustar/discord-bot.git"
   },
-    "dependencies": {
-      "discord.js": "^11.5.1",
-      "bufferutil": "^4.0.0",
-      "erlpack": "0.1.2",
-      "node-opus": "^0.3.2",
-      "opusscript": "^0.0.7",
-      "@discordjs/uws": "10.149.0",
-      
-      "keyv": "^3.1.0",
-      "@keyv/mysql": "^1.1.4"
-    }
-  }
-
+  "keywords": [
+    "bayotest"
+  ],
+  "author": "Sabah and Haru",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/harustar/discord-bot/issues"
+  },
+  "homepage": "https://github.com/harustar/discord-bot#readme"
+}
