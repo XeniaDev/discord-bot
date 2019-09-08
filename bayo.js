@@ -7,7 +7,7 @@ Client.on('ready', () => {
   Client.user.setActivity("with JavaScript", { type: "PLAYING" })
     .catch(console.error);
   Client.user.setStatus("online");
-}
+});
 
 Client.on('message',message=>{
   if (message.content == 'bayo!hi'){
