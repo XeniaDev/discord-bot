@@ -8,7 +8,7 @@ Client.on('ready', () => {
   channel.send("I've been restarted!");
   Client.user.setActivity("bayo!help", { type: "PLAYING" })
     .catch(console.error);
-  Client.user.setStatus("online");
+  Client.user.setStatus("offline");
 });
 
 Client.on('message',message=>{
