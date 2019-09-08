@@ -37,11 +37,7 @@ Client.on('message',message=>{
     message.channel.send(">>> **What can I do?**");
     message.channel.send(">>> At this time. I just can do basic things :confused:");
     message.channel.send(">>> **Commands**");
-    message.channel.send(">>> `bayo!speak` -> I'll Return a weird thing in the channel. Such as ok or etc");
-    message.channel.send(">>> `bayo!confused` -> I'll Return 'Why are you confused?'");
-    message.channel.send(">>> `bayo!ily` -> I'll be thank ful");
-    message.channel.send(">>> `what is my avatar url?` -> I'll Return your avatar url to you");
-    message.channel.send(">>> `what is my username?` -> I'll Return your username");
+    message.channel.send(">>> `bayo!speak` -> I'll Return a weird thing in the channel. Such as ok or etc \n `bayo!confused` -> I'll Return 'Why are you confused?' \n >>> `bayo!ily` -> I'll be thank ful \n `what is my avatar url?` -> I'll Return your avatar url to you \n `what is my username?` -> I'll Return your username");
   }else if (message.content == 'bayo!confused'){
     message.reply("Why are you confused?");
   }else if (message.content == 'bayo!ily'){
