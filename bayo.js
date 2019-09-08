@@ -13,7 +13,19 @@ Client.on('ready', () => {
 
 Client.on('message',message=>{
   if (message.content == 'bayo!hi'){
-   message.reply('wait am i working?');
+   //message.reply('wait am i working?'); 
+    var his = Array("Hi!",
+                      "Howdy!",
+                      "What's up?",
+                      "Hello again",
+                      "Welcome Back!",
+                      "Ciao!", 
+                      "Nice to see you again!",
+                      "Merhaba!",
+                      "Hallo!"
+                     );
+    var hi = his[Math.floor(Math.random()*items.length)];
+    message.reply(""+item+"");
   }else if (message.content == 'bayo!'){
    message.reply('call me Bayonetta!');
   }else if (message.content == 'bayo!heroku?'){
