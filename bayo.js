@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const Keyv = require('keyv');
 const Client = new Discord.Client();
-const channel = Client.channels.get('619902581342208014');
 
 Client.on('ready', () => {
   console.log(`Logged in as ${Client.user.tag}!`);
+  const channel = Client.channels.get('619902581342208014');
   channel.send("I've been restarted!");
   Client.user.setActivity("bayo!help", { type: "PLAYING" })
     .catch(console.error);
