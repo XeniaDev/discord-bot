@@ -10,7 +10,7 @@
     "url": "git+https://github.com/HaruStar/discord-bot.git"
   },
   "engines": {
-    "node": ">=10.x"
+    "node": "10.x"
   },
   "scripts": {
     "start": "node bayo.js"
