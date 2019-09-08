@@ -3,7 +3,8 @@ const Client = new Discord.Client();
 
 Client.on('ready', () => {
   console.log(`Logged in as ${Client.user.tag}!`);
-  Client.user.sendMessage('619902581342208014', "I've been restarted!");
+  const channel = Client.channels.get('619902581342208014');
+  channel.send("I've been restarted!");
   Client.user.setActivity("with JavaScript", { type: "PLAYING" })
     .catch(console.error);
   Client.user.setStatus("online");
