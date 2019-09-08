@@ -24,7 +24,7 @@ Client.on('message',message=>{
                       "Merhaba!",
                       "Hallo!"
                      );
-    var hi = his[Math.floor(Math.random()*items.length)];
+    var hi = his[Math.floor(Math.random()*his.length)];
     message.reply(""+item+"");
   }else if (message.content == 'bayo!'){
    message.reply('call me Bayonetta!');
