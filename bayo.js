@@ -35,11 +35,16 @@ Client.on('message',message=>{
                       "I have to drink coffee to speak", 
                       "Looking at sky. There's not The Shades.",
                       "By name is similar to BayoDino's username",
-                      "I **really** need money, i need 100 Dollars!"
+                      "I **really** need money, i need 100 Dollars!",
+                      "Any thing i can help you with?",
+                      "Now i'm online",
+                      "How dare you to ping me? :eyes:"
                      );
     var item = items[Math.floor(Math.random()*items.length)];
     message.reply(""+item+"");
   }else if (message.content == 'bayo!whychangepfp?'){
+    message.reply("Because it's weird");
+  }else if (message.content == 'why do you want to change your pfp?'){
     message.reply("Because it's weird");
   }else if (message.content == 'bayo!editable?'){
     message.reply("Why?");
