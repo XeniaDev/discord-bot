@@ -15,7 +15,7 @@
       "opusscript": "^0.0.6",
       "@discordjs/uws": "10.149.0",
       
-      "request": "^2.81.0",
+      "keyv": "^3.1.0",
       "@keyv/mysql": "^1.1.4"
     }
   }
