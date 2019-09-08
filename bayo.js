@@ -5,7 +5,7 @@ Client.on('ready', () => {
   console.log(`Logged in as ${Client.user.tag}!`);
   const channel = Client.channels.get('619902581342208014');
   channel.send("I've been restarted!");
-  Client.user.setActivity("with JavaScript", { type: "PLAYING" })
+  Client.user.setActivity("bayo!help", { type: "PLAYING" })
     .catch(console.error);
   Client.user.setStatus("online");
 });
@@ -26,7 +26,16 @@ Client.on('message',message=>{
   }else if (message.content == 'bayo!ily'){
     message.reply("oooh thank you! :heart:");
   }else if (message.content == 'bayo!speak'){
-    var items = Array("Ok",":eyes:","I don't like my pfp","I've no idea","What should i say now?","I have to drink coffee to speak", "I **really** need money, i need 100 Dollars!","By name is similar to BayoDino's username");
+    var items = Array("Ok",
+                      ":eyes:",
+                      "What's up?",
+                      "I've no idea",
+                      "What should i say now?",
+                      "I have to drink coffee to speak", 
+                      "Looking at sky. There's not The Shades.",
+                      "By name is similar to BayoDino's username",
+                      "I **really** need money, i need 100 Dollars!"
+                     );
     var item = items[Math.floor(Math.random()*items.length)];
     message.reply(""+item+"");
   }else if (message.content == 'bayo!whychangepfp?'){
