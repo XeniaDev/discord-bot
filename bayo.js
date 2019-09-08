@@ -1,6 +1,14 @@
 const Discord = require('discord.js');
 const Client = new Discord.Client();
 
+Client.on('ready', () => {
+  console.log(`Logged in as ${Client.user.tag}!`);
+  Client.sendMessage('619902581342208014', "I've been restarted!");
+  Client.user.setActivity("with JavaScript", { type: "PLAYING" })
+    .catch(console.error);
+  Client.user.setStatus("online");
+}
+
 Client.on('message',message=>{
   if (message.content == 'bayo!hi'){
    message.reply('wait am i working?');
