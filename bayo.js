@@ -25,7 +25,7 @@ Client.on('message',message=>{
                       "Hallo!"
                      );
     var hi = his[Math.floor(Math.random()*his.length)];
-    message.reply(""+item+"");
+    message.reply(""+hi+"");
   }else if (message.content == 'bayo!'){
    message.reply('call me Bayonetta!');
   }else if (message.content == 'bayo!heroku?'){
