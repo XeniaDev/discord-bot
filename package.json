@@ -13,7 +13,6 @@
       "erlpack": "discordapp/erlpack",
       "node-opus": "^0.2.7",
       "opusscript": "^0.0.6",
-      "sodium": "^2.0.3",
       "@discordjs/uws": "10.149.0",
       
       "request": "^2.81.0",
