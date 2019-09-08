@@ -54,9 +54,6 @@ Client.on('message',message=>{
   }else if (message.content === 'what is my username?') {
     // Send the user's avatar URL
     message.reply(message.author.username);
-  }else if (message.content === 'bayo!info') {
-    // Get the channel info
-    message.reply(channel.members.size);
   }
 
 });
