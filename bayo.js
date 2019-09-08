@@ -34,6 +34,9 @@ Client.on('message',message=>{
     message.reply('Thanks for waiting for me ergastolator1!');
   }else if (message.content == 'bayo!help'){
     message.channel.send(">>> I'm a very basic bot made by BayoDino and Haruyuki and Ergastolator1. I'll become a helper for Cranterns bot ^-^, Ergastolator1 is not a person that made it, BTW :) He only helped to make it, but thanks for including him anyways in the command!");
+    message.channel.send(">>> **What can I do?**");
+    message.channel.send(">>> At this time. I just can do basic things :confised:");
+    message.channel.send(">>> **Commands**");
   }else if (message.content == 'bayo!confused'){
     message.reply("Why are you confused?");
   }else if (message.content == 'bayo!ily'){
