@@ -21,7 +21,8 @@
     "start_local": "node -r dotenv/config bayotest.js"
   },
   "engines": {
-    "node": "10.x"
+    "node": "10.x",
+    "yarn": "^1.17.3"
   },
   "repository": {
     "type": "git",
