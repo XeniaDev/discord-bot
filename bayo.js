@@ -46,10 +46,6 @@ Client.on('message',message=>{
             name: "Commands",
             value: "`bayo!speak` -> I'll Return a weird thing in the channel. Such as ok or etc \n `bayo!confused` -> I'll Return 'Why are you confused?' \n `bayo!ily` -> I'll be thank ful \n `what is my avatar url?` -> I'll Return your avatar url to you \n `what is my username?` -> I'll Return your username"
         }]
-    timestamp: new Date(),
-    footer: {
-      icon_url: Client.user.avatarURL,
-      text: "© Example"
     }});
   }else if (message.content == 'bayo!confused'){
     message.reply("Why are you confused?");
