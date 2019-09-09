@@ -106,8 +106,6 @@ Client.on('message',message=>{
   }else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
     // Send the user's avatar URL
     message.reply("**Because you're Crazy!**");
-  }else{
-    message.reply("brb");
   }
 });
 
