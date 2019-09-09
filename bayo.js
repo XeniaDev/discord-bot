@@ -121,6 +121,13 @@ const command = args.shift().toLowerCase();
 
 	message.channel.send(`Printed: ${args}`);
   }
+}else if (command === 'add') {
+	if (!args.length) {
+		return;
+	}else{
+
+	message.channel.send(args + 1);
+  }
 }
 });
 
