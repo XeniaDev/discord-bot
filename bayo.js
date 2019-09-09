@@ -75,7 +75,7 @@ Client.on('message', message => {
             "How dare you to ping me? :eyes:",
             "Am i crazy?",
             "NO!",
-            "You want me to speak for 10001'th time",
+            "You want me to speak for 10001th time",
             "brb",
             "feeling weird",
             "good idea",
@@ -116,9 +116,9 @@ Client.on('message', message => {
     } else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
         // Send the user's avatar URL
         message.reply("**Because you're Crazy!**");
-    } else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
+    } else if (message.content == 'no' || message.content == 'no!' || message.content == 'no?' || message.content == 'yes' || message.content == 'yes!' || message.content == 'yes?' || message.content == 'nothing') {
         // Send the user's avatar URL
-        message.reply("**Because you're Crazy!**");
+        message.reply("Nice");
     } else if (command === 'print') {
         if (!args.length) {
             return;
