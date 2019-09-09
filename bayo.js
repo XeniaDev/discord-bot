@@ -6,7 +6,8 @@ const embed = new Discord.RichEmbed();
 Client.on('ready', () => {
   console.log(`Logged in as ${Client.user.tag}!`);
   const channel = Client.channels.get('619902581342208014');
-  channel.send("I've been restarted!");
+  //channel.send("I've been restarted!");
+  channel.send("I'M HERE!");
   Client.user.setActivity("bayo!help", { type: "PLAYING" })
     .catch(console.error);
   Client.user.setStatus("offline");
@@ -105,6 +106,8 @@ Client.on('message',message=>{
   }else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
     // Send the user's avatar URL
     message.reply("**Because you're Crazy!**");
+  }else{
+    message.reply("brb");
   }
 });
 
