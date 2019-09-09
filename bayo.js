@@ -73,20 +73,12 @@ Client.on('message',message=>{
     message.reply("Because it's weird");
   }else if (message.content == 'bayo!editable?'){
     message.reply("Why?");
-  }else if (message.content === 'what is my avatar url?') {
+  }else if (message.content == 'what is my avatar url?' || message.content == 'bayo!avatarurl') {
     // Send the user's avatar URL
     message.reply(message.author.avatarURL);
-  }else if (message.content === 'what is my username?') {
+  }else if (message.content == 'what is my username?' || message.content == 'bayo!username') {
     // Send the user's avatar URL
     message.reply(message.author.username);
-
-  }else if (message.content === 'bayo!avatarurl') {
-    // Send the user's avatar URL
-    message.reply(message.author.avatarURL);
-  }else if (message.content === 'bayo!username') {
-    // Send the user's avatar URL
-    message.reply(message.author.username);
-
   }else if (message.content == 'bayo!info'){
     message.channel.send({embed: {
       author: {
