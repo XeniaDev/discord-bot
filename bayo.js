@@ -80,6 +80,24 @@ Client.on('message',message=>{
     // Send the user's avatar URL
     message.reply(message.author.username);
 
+  }else if (message.content == 'bayo!info'){
+    message.channel.send({embed: {
+      author: {
+       name: message.author.username,
+      icon_url: message.author.avatarURL
+    },
+        color: 0x0000FF,
+        title: "User Info : "+message.author.username,
+        description: "I'm a very basic bot made by BayoDino and Haruyuki and Ergastolator1. I'll become a helper for Cranterns bot ^-^, Ergastolator1 is not a person that made it, BTW :) He only helped to make it, but thanks for including him anyways in the command!",
+        fields: [{
+            name: "What can I do?",
+            value: "At this time, I can jut do basic things :confused:"
+        },
+        {
+            name: "Commands",
+            value: "`bayo!speak` -> I'll Return a weird thing in the channel. Such as ok or etc \n `bayo!confused` -> I'll Return 'Why are you confused?' \n `bayo!ily` -> I'll be thank ful \n `what is my avatar url?` -> I'll Return your avatar url to you \n `what is my username?` -> I'll Return your username"
+        }]
+    }});
   }
 });
 
