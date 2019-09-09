@@ -83,36 +83,6 @@ Client.on('message',message=>{
   }else if (message.content === 'what is my username?') {
     // Send the user's avatar URL
     message.reply(message.author.username);
-  }else if (message.content === 'bayo!info') {
-    // Send the user's avatar URL
-   message.channel.send({embed: {
-    color: 3447003,
-    author: {
-      name: message.author.username,
-      icon_url: message.author.avatarURL
-    },
-    title: message.author.username+"'s Info",
-    description: "",
-    fields: [{
-        name: "Username",
-        value: message.author.username
-      },
-      {
-        name: "Masked links",
-        value: "You can put [masked links](http://google.com) inside of rich embeds."
-      },
-      {
-        name: "Markdown",
-        value: "You can put all the *usual* **__Markdown__** inside of them."
-      }
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: message.author.avatarURL,
-      text: "© Example"
-    }
-  }
-});
 
   }
 });
