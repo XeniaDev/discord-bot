@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const Keyv = require('keyv');
 const Client = new Discord.Client();
+const embed = new Discord.RichEmbed();
 
 Client.on('ready', () => {
   console.log(`Logged in as ${Client.user.tag}!`);
@@ -45,6 +46,10 @@ Client.on('message',message=>{
             name: "Commands",
             value: "`bayo!speak` -> I'll Return a weird thing in the channel. Such as ok or etc \n `bayo!confused` -> I'll Return 'Why are you confused?' \n `bayo!ily` -> I'll be thank ful \n `what is my avatar url?` -> I'll Return your avatar url to you \n `what is my username?` -> I'll Return your username"
         }]
+    timestamp: new Date(),
+    footer: {
+      icon_url: Client.user.avatarURL,
+      text: "© Example"
     }});
   }else if (message.content == 'bayo!confused'){
     message.reply("Why are you confused?");
@@ -78,6 +83,37 @@ Client.on('message',message=>{
   }else if (message.content === 'what is my username?') {
     // Send the user's avatar URL
     message.reply(message.author.username);
+  }else if (message.content === 'bayo!info') {
+    // Send the user's avatar URL
+   message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: message.author.username,
+      icon_url: message.author.avatarURL
+    },
+    title: message.author.username+"'s Info",
+    description: "",
+    fields: [{
+        name: "Username",
+        value: message.author.username
+      },
+      {
+        name: "Masked links",
+        value: "You can put [masked links](http://google.com) inside of rich embeds."
+      },
+      {
+        name: "Markdown",
+        value: "You can put all the *usual* **__Markdown__** inside of them."
+      }
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: message.author.avatarURL,
+      text: "© Example"
+    }
+  }
+});
+
   }
 });
 
