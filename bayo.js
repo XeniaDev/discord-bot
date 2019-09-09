@@ -72,7 +72,9 @@ Client.on('message',message=>{
                       "good idea",
                       "At least, I'm crazy",
                       "I'm crazy, right?",
-                      "My aunt speaks a lot, want her to speak to you"
+                      "My aunt speaks a lot, want her to speak to you",
+                      "Why i cannot become a person",
+                      "I'm bad"
                      );
     var item = items[Math.floor(Math.random()*items.length)];
     message.reply(""+item+"");
@@ -100,6 +102,9 @@ Client.on('message',message=>{
     }});
   }else if (message.content == 'what is my color?'){
     message.channel.send(message.guild.member(message.author).displayHexColor);
+  }else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
+    // Send the user's avatar URL
+    message.reply("**Because you're Crazy!**");
   }
 });
 
