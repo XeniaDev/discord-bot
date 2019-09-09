@@ -95,11 +95,7 @@ Client.on('message',message=>{
     },
         color: 0x0000FF,
         title: "User Info : "+message.author.username,
-        //description: "I'm a very basic bot made by BayoDino and Haruyuki and Ergastolator1. I'll become a helper for Cranterns bot ^-^, Ergastolator1 is not a person that made it, BTW :) He only helped to make it, but thanks for including him anyways in the command!",
-        fields: [{
-            name: "Info",
-            value: "Username:"+message.author.username+"\n User ID: "+message.author.id+"\n Status: "+message.author.presence.status+""
-        }]
+        description: "Username:"+message.author.username+"\n User ID: "+message.author.id+"\n Status: "+message.author.presence.status+""
     }});
   }
 });
