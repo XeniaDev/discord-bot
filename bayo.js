@@ -50,7 +50,7 @@ const command = args.shift().toLowerCase();
         },
         {
             name: "Commands",
-            value: "`bayo!speak` -> I'll Return a weird thing in the channel. Such as ok or etc \n `bayo!confused` -> I'll Return 'Why are you confused?' \n `bayo!ily` -> I'll be thank ful \n `what is my avatar url?` -> I'll Return your avatar url to you \n `what is my username?` -> I'll Return your username"
+            value: "`bayo!speak` -> I'll Return a weird thing in the channel. Such as ok or etc \n `bayo!confused` -> I'll Return 'Why are you confused?' \n `bayo!ily` -> I'll be thank ful \n `bayo!avatarurl` -> I'll Return your avatar url to you \n `bayo!username` -> I'll Return your username"
         }]
     }});
   }else if (message.content == 'bayo!confused'){
