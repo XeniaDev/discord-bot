@@ -3,6 +3,13 @@ const Keyv = require('keyv');
 const Client = new Discord.Client();
 const embed = new Discord.RichEmbed();
 
+function reverseString(str) {
+  if (str === "")
+    return "";
+  else
+    return reverseString(str.substr(1)) + str.charAt(0);
+}
+
 Client.on('ready', () => {
   console.log(`Logged in as ${Client.user.tag}!`);
   const channel = Client.channels.get('619902581342208014');
@@ -127,6 +134,13 @@ const command = args.shift().toLowerCase();
 	}else{
 
 	message.channel.send(args + 1);
+  }
+}else if (command === 'mirror') {
+	if (!args.length) {
+		return;
+	}else{
+
+	message.channel.send(reverseString(args));
   }
 }
 });
