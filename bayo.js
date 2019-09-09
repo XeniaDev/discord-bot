@@ -10,7 +10,7 @@ Client.on('ready', () => {
     channel.send(":eyes:");
     Client.user.setActivity("bayo!help", { type: "PLAYING" })
         .catch(console.error);
-    Client.user.setStatus("offline");
+    Client.user.setStatus("dnd");
 });
 
 Client.on('message', message => {
