@@ -7,7 +7,7 @@ Client.on('ready', () => {
   console.log(`Logged in as ${Client.user.tag}!`);
   const channel = Client.channels.get('619902581342208014');
   //channel.send("I've been restarted!");
-  channel.send("I'M HERE!");
+  channel.send(":eyes:");
   Client.user.setActivity("bayo!help", { type: "PLAYING" })
     .catch(console.error);
   Client.user.setStatus("offline");
