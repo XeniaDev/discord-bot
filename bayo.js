@@ -59,11 +59,20 @@ Client.on('message',message=>{
                       "What should i say now?",
                       "I have to drink coffee to speak", 
                       "Looking at sky. There's not The Shades.",
-                      "By name is similar to BayoDino's username",
                       "I **really** need money, i need 100 Dollars!",
                       "Any thing i can help you with?",
                       "Now i'm online",
-                      "How dare you to ping me? :eyes:"
+                      "How dare you to ping me? :eyes:",
+                      "How dare you to ping me? :eyes:",
+                      "Am i crazy?",
+                      "NO!",
+                      "You want me to speak for 10001'th time",
+                      "brb",
+                      "feeling weird",
+                      "good idea",
+                      "At least, I'm crazy",
+                      "I'm crazy, right?",
+                      "My aunt speaks a lot, want her to speak to you"
                      );
     var item = items[Math.floor(Math.random()*items.length)];
     message.reply(""+item+"");
