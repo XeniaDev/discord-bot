@@ -35,7 +35,7 @@ Client.on('message',message=>{
     message.reply('Thanks for waiting for me ergastolator1!');
   }else if (message.content == 'bayo!help'){
     message.channel.send({embed: {
-        color: 0x0000FF,
+        color: message.guild.member(message.author).displayHexColor,
         title: "BayoTest Discord bot",
         description: "I'm a very basic bot made by BayoDino and Haruyuki and Ergastolator1. I'll become a helper for Cranterns bot ^-^, Ergastolator1 is not a person that made it, BTW :) He only helped to make it, but thanks for including him anyways in the command!",
         fields: [{
