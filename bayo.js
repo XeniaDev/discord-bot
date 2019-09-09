@@ -80,6 +80,13 @@ Client.on('message',message=>{
     // Send the user's avatar URL
     message.reply(message.author.username);
 
+  }else if (message.content === 'bayo!avatarurl') {
+    // Send the user's avatar URL
+    message.reply(message.author.avatarURL);
+  }else if (message.content === 'bayo!username') {
+    // Send the user's avatar URL
+    message.reply(message.author.username);
+
   }else if (message.content == 'bayo!info'){
     message.channel.send({embed: {
       author: {
