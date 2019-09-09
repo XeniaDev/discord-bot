@@ -17,8 +17,8 @@
     "dotenv": "^8.1.0"
   },
   "scripts": {
-    "start": "node bayotest.js",
-    "start_local": "node -r dotenv/config bayotest.js"
+    "start": "node bayo.js",
+    "start_local": "node -r dotenv/config bayo.js"
   },
   "engines": {
     "node": "10.x",
