@@ -14,6 +14,11 @@ Client.on('ready', () => {
 });
 
 Client.on('message',message=>{
+  const prefix = "bayo!";
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+const args = message.content.slice(prefix.length).split(' ');
+const command = args.shift().toLowerCase();
   if (message.content == 'bayo!hi'){
    //message.reply('wait am i working?'); 
     var his = Array("Hi!",
@@ -109,7 +114,14 @@ Client.on('message',message=>{
   }else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
     // Send the user's avatar URL
     message.reply("**Because you're Crazy!**");
+  }else if (command === 'print') {
+	if (!args.length) {
+		return;
+	}else{
+
+	message.channel.send(`Printed: ${args}`);
   }
+}
 });
 
 Client.login(process.env.BOT_TOKEN);
