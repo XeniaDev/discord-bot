@@ -16,7 +16,7 @@ exports.conf = {
 
 exports.help = {
   name: "element", // The name of the command used to call it
-  category: "Info", // The category the command fits in
+  category: "Informational", // The category the command fits in
   description: "Prints whatever you say", // Short description of what the command does
   usage: "element info" // An example of how to use the command
 };
