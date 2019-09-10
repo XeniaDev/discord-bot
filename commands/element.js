@@ -3,19 +3,20 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     return;
   } else if (args == "blood"){
   //get infos
-    message.channel.send(`Blood`,{ files: ["https://i.postimg.cc/L6HnKHjw/blood.png"]});
-  }
+    //message.channel.send(`Blood`,{files: ["https://i.postimg.cc/L6HnKHjw/blood.png"]} );
   message.channel.send({
     embed: {
       author: {
         name: message.author.username,
         icon_url: message.author.avatarURL
       },
-      color: 0x0000FF,
-      title: "User Info : " + message.author.username,
-      description: "Username:" + message.author.username + "\n User ID: " + message.author.id + "\n Status: " + message.author.presence.status + ""
+      color: 0xFF0000,
+      title: "Element : Blood",
+      files: ["https://i.postimg.cc/L6HnKHjw/blood.png"],
+      description: "**Capital Zone**: Plague Arena \n **Element color** : Red \n **Reigning God** : Plaguebringe \n **Versus** : Nature"
     }
-  });
+    });
+  }
 };
 
 exports.conf = {
