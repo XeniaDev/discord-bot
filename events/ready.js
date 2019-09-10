@@ -3,7 +3,7 @@ module.exports = async client => {
   client.logger.log(`${client.user.tag}, ready to serve ${client.users.size} users in ${client.guilds.size} servers.`, "ready");
 
   // Make the bot "play the game" which is the help command with default prefix.
-  client.user.setActivity(`${client.settings.get("default").prefix}help`, {type: "PLAYING"});
+  client.user.setActivity(`bayo!help`, {type: "PLAYING"});
   client.user.setStatus("online");
 
   const channel = client.channels.get('619902581342208014');
