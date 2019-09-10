@@ -9,7 +9,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     ":pineapple:"
   );
   const food = foods[Math.floor(Math.random() * foods.length)];
-  if (!args){ 
+  if (args.length === 0){ 
     message.reply("You cannot feed air");
     return;
   }
