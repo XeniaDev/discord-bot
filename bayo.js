@@ -8,12 +8,12 @@ Client.on('ready', () => {
     channel.send(":eyes:");
     Client.user.setActivity("bayo!help", { type: "PLAYING" })
         .catch(console.error);
-    Client.user.setStatus("offline");
+    Client.user.setStatus("dnd");
 });
 
 Client.on('message', message => {
     const prefix = "bayo!";
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
+    if (message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(' ');
     const command = args.shift().toLowerCase();
@@ -73,7 +73,7 @@ Client.on('message', message => {
             "How dare you to ping me? :eyes:",
             "Am i crazy?",
             "NO!",
-            "You want me to speak for 10001'th time",
+            "You want me to speak for 10001th time",
             "brb",
             "feeling weird",
             "good idea",
@@ -114,9 +114,9 @@ Client.on('message', message => {
     } else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
         // Send the user's avatar URL
         message.reply("**Because you're Crazy!**");
-    } else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
+    } else if (message.content == 'no' || message.content == 'no!' || message.content == 'no?' || message.content == 'yes' || message.content == 'yes!' || message.content == 'yes?' || message.content == 'nothing') {
         // Send the user's avatar URL
-        message.reply("**Because you're Crazy!**");
+        message.reply("Nice");
     } else if (command === 'print') {
         if (!args.length) {
             return;
@@ -136,7 +136,20 @@ Client.on('message', message => {
         let reverseArray = splitMessage.reverse();
         let joinArray = reverseArray.join("");
         message.channel.send(joinArray);
-    }
+    }else if (message.content == 'bayo!adventure') {
+        // Send the user's avatar URL
+         var adventures = Array(
+            " Tried to Take a look at The forest, Nice but burned forest",
+            " Looked up at BayoDino, she saw a dragon, Both are running away.",
+            " Tried to Help Haru to climb the tree, But you couldn't and you and he fell down. ouch!",
+            " Going to collect bunch of logs. He/She saw Khaos cannot find logs, gave the logs to her. so kindness.",
+            " Found HedaFox but he was crying. He/She tried to ask HedaFox what's going on. but he went away.",
+            " Suggested CayoDino to play with him. But he didn't accepted because his brother didn't allowed him, aww.",
+            " Was running but he/she didn't see Ergastolator and they fell down, it just was an small mistake."
+        );
+        var adventure = adventures[Math.floor(Math.random() * adventures.length)];
+        message.reply("" + adventure + "");
+        }
 });
 
 Client.login(process.env.BOT_TOKEN);
