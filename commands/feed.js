@@ -6,25 +6,24 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     ":snake:",
     ":cactus:",
     ":four_leaf_clover: ",
-    ":pineapple:",
-    "Any thing i can help you with?",
-    "Now i'm online",
-    "How dare you to ping me? :eyes:",
-    "How dare you to ping me? :eyes:",
-    "Am i crazy?",
-    "NO!",
-    "You want me to speak for 10001th time",
-    "brb",
-    "feeling weird",
-    "good idea",
-    "At least, I'm crazy",
-    "I'm crazy, right?",
-    "My aunt speaks a lot, want her to speak to you",
-    "Why i cannot become a person",
-    "I'm bad"
+    ":pineapple:"
   );
   const food = foods[Math.floor(Math.random() * foods.length)];
-  message.reply(food);
+  if (!args){ 
+    message.reply("You cannot feed air");
+    return;
+  }
+
+	if (args.startsWith('<@') && args.endsWith('>')) {
+		args = args.slice(2, -1);
+
+		if (args.startsWith('!')) {
+			args = args.slice(1);
+		}
+
+		message.reply(" **You put a "+food+" in "+client.users.get(args)+"'s mouth!**");
+	}
+  //message.reply(food);
 };
 
 exports.conf = {
@@ -35,8 +34,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "speak", // The name of the command used to call it
+  name: "feed", // The name of the command used to call it
   category: "Fun", // The category the command fits in
-  description: "I'll Return a weird thing in the channel, such as ok or etc", // Short description of what the command does
-  usage: "speak" // An example of how to use the command
+  description: "I'll Feed a user hat you mention", // Short description of what the command does
+  usage: "feed" // An example of how to use the command
 };
