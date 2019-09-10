@@ -4,7 +4,6 @@ const Client = new Discord.Client();
 Client.on('ready', () => {
     console.log(`Logged in as ${Client.user.tag}!`);
     const channel = Client.channels.get('619902581342208014');
-    //channel.send("I've been restarted!");
     channel.send(":eyes:");
     Client.user.setActivity("bayo!help", { type: "PLAYING" })
         .catch(console.error);
@@ -18,7 +17,6 @@ Client.on('message', message => {
     const args = message.content.slice(prefix.length).split(' ');
     const command = args.shift().toLowerCase();
     if (message.content == 'bayo!hi') {
-        //message.reply('wait am i working?'); 
         var his = Array("Hi!",
             "Howdy!",
             "What's up?",
@@ -114,7 +112,7 @@ Client.on('message', message => {
     } else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
         // Send the user's avatar URL
         message.reply("**Because you're Crazy!**");
-    } else if (message.content == 'no' || message.content == 'no!' || message.content == 'no?' || message.content == 'yes' || message.content == 'yes!' || message.content == 'yes?' || message.content == 'nothing') {
+    } else if (message.content === 'no' || message.content == 'no!' || message.content == 'no?' || message.content == 'yes' || message.content == 'yes!' || message.content == 'yes?' || message.content == 'nothing') {
         // Send the user's avatar URL
         message.reply("Nice");
     } else if (command === 'print') {
@@ -130,13 +128,13 @@ Client.on('message', message => {
 
             message.channel.send(args + 1);
         }
-    } else if (command == 'mirror') {
+    } else if (command === 'mirror') {
         let combinedString = args.join(" ");
         let splitMessage = combinedString.split("");
         let reverseArray = splitMessage.reverse();
         let joinArray = reverseArray.join("");
         message.channel.send(joinArray);
-    }else if (message.content == 'bayo!adventure') {
+    }else if (message.content === 'bayo!adventure') {
         // Send the user's avatar URL
          var adventures = Array(
             " Tried to Take a look at The forest, Nice but burned forest",
