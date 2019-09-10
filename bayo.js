@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
-const Keyv = require('keyv');
 const Client = new Discord.Client();
-const embed = new Discord.RichEmbed();
 
 Client.on('ready', () => {
     console.log(`Logged in as ${Client.user.tag}!`);
