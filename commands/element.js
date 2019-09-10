@@ -13,7 +13,22 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
       color: 0xFF0000,
       title: "Element : Blood",
       files: ["https://i.postimg.cc/L6HnKHjw/blood.png"],
-      description: "**Capital Zone**: Plague Arena \n **Element color** : Red \n **Reigning God** : Plaguebringe \n **Versus** : Nature"
+      description: "**Capital Zone**: Plague Arena \n **Element color** : Red \n **Reigning God** : PlagueGriff \n **Versus** : Nature \n **Population**: 12"
+    }
+    });
+  }else if (args == "fire"){
+  //get infos
+    //message.channel.send(`Blood`,{files: ["https://i.postimg.cc/L6HnKHjw/blood.png"]} );
+  message.channel.send({
+    embed: {
+      author: {
+        name: message.author.username,
+        icon_url: message.author.avatarURL
+      },
+      color: 0xff8000,
+      title: "Element : Fire",
+      files: ["https://i.postimg.cc/y621TcPV/Fire.png"],
+      description: "**Capital Zone**: Volcano \n **Element color** : Orange \n **Reigning God** : Volcan \n **Versus** : Water \n **Population**: 4"
     }
     });
   }
