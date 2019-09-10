@@ -1,153 +1,81 @@
-const Discord = require('discord.js');
-const Client = new Discord.Client();
+// This will check if the node version you are running is the required
+// Node version, if it isn't it will throw the following error to inform
+// you.
+if (Number(process.version.slice(1).split(".")[0]) < 8) throw new Error("Node 8.0.0 or higher is required. Update Node on your system.");
 
-Client.on('ready', () => {
-    console.log(`Logged in as ${Client.user.tag}!`);
-    const channel = Client.channels.get('619902581342208014');
-    channel.send(":eyes:");
-    Client.user.setActivity("bayo!help", { type: "PLAYING" })
-        .catch(console.error);
-    Client.user.setStatus("dnd");
-});
+// Load up the discord.js library
+const Discord = require("discord.js");
+// We also load the rest of the things we need in this file:
+const { promisify } = require("util");
+const readdir = promisify(require("fs").readdir);
+const Enmap = require("enmap");
 
-Client.on('message', message => {
-    const prefix = "bayo!";
-    if (message.author.bot) return;
+// This is your client. Some people call it `bot`, some people call it `self`,
+// some might call it `cootchie`. Either way, when you see `client.something`,
+// or `bot.something`, this is what we're refering to. Your client.
+const client = new Discord.Client();
 
-    const args = message.content.slice(prefix.length).split(' ');
-    const command = args.shift().toLowerCase();
-    if (message.content === 'bayo!hi') {
-        var his = Array("Hi!",
-            "Howdy!",
-            "What's up?",
-            "Hello again",
-            "Welcome Back!",
-            "Ciao!",
-            "Nice to see you again!",
-            "Merhaba!",
-            "Hallo!"
-        );
-        var hi = his[Math.floor(Math.random() * his.length)];
-        message.reply("" + hi + "");
-    } else if (message.content === 'bayo!') {
-        message.reply('call me Bayonetta!');
-    } else if (message.content === 'bayo!heroku?') {
-        message.reply('Yes I\'m running off Heroku!');
-    } else if (message.content === 'bayo!ergastolator1') {
-        message.reply('Thanks for waiting for me ergastolator1!');
-    } else if (message.content === 'bayo!help') {
-        message.channel.send({
-            embed: {
-                color: eval('0x' + message.guild.member(message.author).displayHexColor.slice(1)),
-                title: "BayoTest Discord bot",
-                description: "I'm a very basic bot made by BayoDino and Haruyuki and Ergastolator1. I'll become a helper for Cranterns bot ^-^, Ergastolator1 is not a person that made it, BTW :) He only helped to make it, but thanks for including him anyways in the command!",
-                fields: [{
-                        name: "What can I do?",
-                        value: "At this time, I can just do basic things :confused:"
-                    },
-                    {
-                        name: "Commands",
-                        value: "`bayo!speak` -> I'll Return a weird thing in the channel. Such as ok or etc \n `bayo!confused` -> I'll Return 'Why are you confused?' \n `bayo!ily` -> I'll be thank ful \n `bayo!avatarurl` -> I'll Return your avatar url to you \n `bayo!username` -> I'll Return your username"
-                    }
-                ]
-            }
-        });
-    } else if (message.content === 'bayo!confused') {
-        message.reply("Why are you confused?");
-    } else if (message.content === 'bayo!ily') {
-        message.reply("oooh thank you! :heart:");
-    } else if (message.content === 'bayo!speak') {
-        var items = Array("Ok",
-            ":eyes:",
-            "What's up?",
-            "I've no idea",
-            "What should i say now?",
-            "I have to drink coffee to speak",
-            "Looking at sky. There's not The Shades.",
-            "I **really** need money, i need 100 Dollars!",
-            "Any thing i can help you with?",
-            "Now i'm online",
-            "How dare you to ping me? :eyes:",
-            "How dare you to ping me? :eyes:",
-            "Am i crazy?",
-            "NO!",
-            "You want me to speak for 10001th time",
-            "brb",
-            "feeling weird",
-            "good idea",
-            "At least, I'm crazy",
-            "I'm crazy, right?",
-            "My aunt speaks a lot, want her to speak to you",
-            "Why i cannot become a person",
-            "I'm bad"
-        );
-        var item = items[Math.floor(Math.random() * items.length)];
-        message.reply("" + item + "");
-    } else if (message.content === 'bayo!whychangepfp?') {
-        message.reply("Because it's weird");
-    } else if (message.content === 'why do you want to change your pfp?') {
-        message.reply("Because it's weird");
-    } else if (message.content === 'bayo!editable?') {
-        message.reply("Why?");
-    } else if (message.content === 'what is my avatar url?' || message.content === 'bayo!avatarurl') {
-        // Send the user's avatar URL
-        message.reply(message.author.avatarURL);
-    } else if (message.content === 'what is my username?' || message.content === 'bayo!username') {
-        // Send the user's avatar URL
-        message.reply(message.author.username);
-    } else if (message.content === 'bayo!info') {
-        message.channel.send({
-            embed: {
-                author: {
-                    name: message.author.username,
-                    icon_url: message.author.avatarURL
-                },
-                color: 0x0000FF,
-                title: "User Info : " + message.author.username,
-                description: "Username:" + message.author.username + "\n User ID: " + message.author.id + "\n Status: " + message.author.presence.status + ""
-            }
-        });
-    } else if (message.content === 'what is my color?') {
-        message.channel.send(message.guild.member(message.author).displayHexColor);
-    } else if (message.content === 'why' || message.content === 'why?' || message.content === 'why!') {
-        // Send the user's avatar URL
-        message.reply("**Because you're Crazy!**");
-    } else if (message.content === 'no' || message.content === 'no!' || message.content === 'no?' || message.content === 'yes' || message.content === 'yes!' || message.content === 'yes?' || message.content === 'nothing') {
-        // Send the user's avatar URL
-        message.reply("Nice");
-    } else if (command === 'print') {
-        if (!args.length) {
-            return;
-        } else {
-            message.channel.send(`Printed: ${args}`);
-        }
-    } else if (command === 'add') {
-        if (!args.length) {
-            return;
-        } else {
+// Here we load the config file that contains our token and our prefix values.
+client.config = require("./config.js");
+// client.config.token contains the bot's token
+// client.config.prefix contains the message prefix
 
-            message.channel.send(args + 1);
-        }
-    } else if (command === 'mirror') {
-        let combinedString = args.join(" ");
-        let splitMessage = combinedString.split("");
-        let reverseArray = splitMessage.reverse();
-        let joinArray = reverseArray.join("");
-        message.channel.send(joinArray);
-    }else if (message.content === 'bayo!adventure') {
-        // Send the user's avatar URL
-         var adventures = Array(
-            " Tried to Take a look at The forest, Nice but burned forest",
-            " Looked up at BayoDino, she saw a dragon, Both are running away.",
-            " Tried to Help Haru to climb the tree, But you couldn't and you and he fell down. ouch!",
-            " Going to collect bunch of logs. He/She saw Khaos cannot find logs, gave the logs to her. so kindness.",
-            " Found HedaFox but he was crying. He/She tried to ask HedaFox what's going on. but he went away.",
-            " Suggested CayoDino to play with him. But he didn't accepted because his brother didn't allowed him, aww.",
-            " Was running but he/she didn't see Ergastolator and they fell down, it just was an small mistake."
-        );
-        var adventure = adventures[Math.floor(Math.random() * adventures.length)];
-        message.reply("" + adventure + "");
-        }
-});
+// Require our logger
+client.logger = require("./modules/Logger");
 
-Client.login(process.env.BOT_TOKEN);
+// Let's start by getting some useful functions that we'll use throughout
+// the bot, like logs and elevation features.
+require("./modules/functions.js")(client);
+
+// Aliases and commands are put in collections where they can be read from,
+// catalogued, listed, etc.
+client.commands = new Enmap();
+client.aliases = new Enmap();
+
+// Now we integrate the use of Evie's awesome EnMap module, which
+// essentially saves a collection to disk. This is great for per-server configs,
+// and makes things extremely easy for this purpose.
+client.settings = new Enmap({name: "settings"});
+
+// We're doing real fancy node 8 async/await stuff here, and to do that
+// we need to wrap stuff in an anonymous function. It's annoying but it works.
+
+const init = async () => {
+
+    // Here we load **commands** into memory, as a collection, so they're accessible
+    // here and everywhere else.
+    const cmdFiles = await readdir("./commands/");
+    client.logger.log(`Loading a total of ${cmdFiles.length} commands.`);
+    cmdFiles.forEach(f => {
+        if (!f.endsWith(".js")) return;
+        const response = client.loadCommand(f);
+        if (response) console.log(response);
+    });
+
+    // Then we load events, which will include our message and ready event.
+    const evtFiles = await readdir("./events/");
+    client.logger.log(`Loading a total of ${evtFiles.length} events.`);
+    evtFiles.forEach(file => {
+        const eventName = file.split(".")[0];
+        client.logger.log(`Loading Event: ${eventName}`);
+        const event = require(`./events/${file}`);
+        // Bind the client to any event, before the existing arguments
+        // provided by the discord.js event.
+        // This line is awesome by the way. Just sayin'.
+        client.on(eventName, event.bind(null, client));
+    });
+
+    // Generate a cache of client permissions for pretty perm names in commands.
+    client.levelCache = {};
+    for (let i = 0; i < client.config.permLevels.length; i++) {
+        const thisLevel = client.config.permLevels[i];
+        client.levelCache[thisLevel.name] = thisLevel.level;
+    }
+
+    // Here we login the client.
+    client.login(client.config.token);
+
+// End top-level async/await function.
+};
+
+init();
