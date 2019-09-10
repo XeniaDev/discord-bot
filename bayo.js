@@ -16,7 +16,7 @@ Client.on('message', message => {
 
     const args = message.content.slice(prefix.length).split(' ');
     const command = args.shift().toLowerCase();
-    if (message.content == 'bayo!hi') {
+    if (message.content === 'bayo!hi') {
         var his = Array("Hi!",
             "Howdy!",
             "What's up?",
@@ -29,13 +29,13 @@ Client.on('message', message => {
         );
         var hi = his[Math.floor(Math.random() * his.length)];
         message.reply("" + hi + "");
-    } else if (message.content == 'bayo!') {
+    } else if (message.content === 'bayo!') {
         message.reply('call me Bayonetta!');
-    } else if (message.content == 'bayo!heroku?') {
+    } else if (message.content === 'bayo!heroku?') {
         message.reply('Yes I\'m running off Heroku!');
-    } else if (message.content == 'bayo!ergastolator1') {
+    } else if (message.content === 'bayo!ergastolator1') {
         message.reply('Thanks for waiting for me ergastolator1!');
-    } else if (message.content == 'bayo!help') {
+    } else if (message.content === 'bayo!help') {
         message.channel.send({
             embed: {
                 color: eval('0x' + message.guild.member(message.author).displayHexColor.slice(1)),
@@ -52,11 +52,11 @@ Client.on('message', message => {
                 ]
             }
         });
-    } else if (message.content == 'bayo!confused') {
+    } else if (message.content === 'bayo!confused') {
         message.reply("Why are you confused?");
-    } else if (message.content == 'bayo!ily') {
+    } else if (message.content === 'bayo!ily') {
         message.reply("oooh thank you! :heart:");
-    } else if (message.content == 'bayo!speak') {
+    } else if (message.content === 'bayo!speak') {
         var items = Array("Ok",
             ":eyes:",
             "What's up?",
@@ -83,19 +83,19 @@ Client.on('message', message => {
         );
         var item = items[Math.floor(Math.random() * items.length)];
         message.reply("" + item + "");
-    } else if (message.content == 'bayo!whychangepfp?') {
+    } else if (message.content === 'bayo!whychangepfp?') {
         message.reply("Because it's weird");
-    } else if (message.content == 'why do you want to change your pfp?') {
+    } else if (message.content === 'why do you want to change your pfp?') {
         message.reply("Because it's weird");
-    } else if (message.content == 'bayo!editable?') {
+    } else if (message.content === 'bayo!editable?') {
         message.reply("Why?");
-    } else if (message.content == 'what is my avatar url?' || message.content == 'bayo!avatarurl') {
+    } else if (message.content === 'what is my avatar url?' || message.content === 'bayo!avatarurl') {
         // Send the user's avatar URL
         message.reply(message.author.avatarURL);
-    } else if (message.content == 'what is my username?' || message.content == 'bayo!username') {
+    } else if (message.content === 'what is my username?' || message.content === 'bayo!username') {
         // Send the user's avatar URL
         message.reply(message.author.username);
-    } else if (message.content == 'bayo!info') {
+    } else if (message.content === 'bayo!info') {
         message.channel.send({
             embed: {
                 author: {
@@ -107,12 +107,12 @@ Client.on('message', message => {
                 description: "Username:" + message.author.username + "\n User ID: " + message.author.id + "\n Status: " + message.author.presence.status + ""
             }
         });
-    } else if (message.content == 'what is my color?') {
+    } else if (message.content === 'what is my color?') {
         message.channel.send(message.guild.member(message.author).displayHexColor);
-    } else if (message.content == 'why' || message.content == 'why?' || message.content == 'why!') {
+    } else if (message.content === 'why' || message.content === 'why?' || message.content === 'why!') {
         // Send the user's avatar URL
         message.reply("**Because you're Crazy!**");
-    } else if (message.content === 'no' || message.content == 'no!' || message.content == 'no?' || message.content == 'yes' || message.content == 'yes!' || message.content == 'yes?' || message.content == 'nothing') {
+    } else if (message.content === 'no' || message.content === 'no!' || message.content === 'no?' || message.content === 'yes' || message.content === 'yes!' || message.content === 'yes?' || message.content === 'nothing') {
         // Send the user's avatar URL
         message.reply("Nice");
     } else if (command === 'print') {
