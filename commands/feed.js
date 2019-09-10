@@ -17,7 +17,12 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   if (args[0].startsWith('<@') && args[0].endsWith('>')) {
     args = args[0].slice(2, -1);
 
-    message.reply(" **You put a "+food+" in "+client.users.get(args)+"'s mouth!**");
+    if (args.startsWith('!')) {
+        args = args.slice(1);
+    }
+
+    const User = await client.fetchUser(args);
+    message.reply(" **You put a "+food+" in "+User+"'s mouth!**");
   }
 };
 
