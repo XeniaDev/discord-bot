@@ -21,8 +21,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         args = args.slice(1);
     }
 
-    const User = await client.fetchUser(args);
-    message.reply(" **You put a "+food+" in "+User+"'s mouth!**");
+    message.reply(" **You put a "+food+" in "+client.users.get(args)+"'s mouth!**");
   }
 };
 
