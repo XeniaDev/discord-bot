@@ -2,7 +2,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   if (!args.length) {
     return;
   } else {
-    message.channel.send(`Printed: ${args}`);
+    message.channel.send(`Printed: \`${JSON.stringify(args)}\``);
   }
 };
 
