@@ -1,12 +1,31 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  const foods = Array(":bug:",
+  const foods = Array(
+    ":bug:",
     ":ant:",
     ":bee:",
     ":scorpion:",
     ":snake:",
     ":cactus:",
     ":four_leaf_clover: ",
-    ":pineapple:"
+    ":pineapple:",
+    "corn",
+    "lollipop",
+    "cheese",
+    "pizza",
+    "stew",
+    "avacado",
+    "dango",
+    "tomato",
+    "egg",
+    "potato",
+    "babybottle",
+    "beer",
+    "rat",
+    ":christmas_tree:",
+    ":chestnut:",
+    ":lizard:",
+    ":shrimp:",
+    ":tangerine:"
   );
   const food = foods[Math.floor(Math.random() * foods.length)];
   if (args.length === 0){ 
