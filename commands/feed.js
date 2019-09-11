@@ -18,7 +18,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     ":tomato:",
     ":egg:",
     ":potato:",
-    ":babybottle:",
+    ":baby_bottle:",
     ":beer:",
     ":rat:",
     ":christmas_tree:",
