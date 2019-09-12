@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   const adventures = Array(" tried to take at look at the forest, but it's a burned one.",
-    " Looked up at BayoDino, she saw a dragon, Both are running away.",
+      " Looked up at BayoDino, but She saw a big dragon, Both tried to runaway and they could.",
     " tried to help Haru climb the tree, but they couldn't and they fell down. Ouch!",
     " Going to collect bunch of logs. He/She saw Khaos cannot find logs, gave the logs to her. so kindness.",
     "  found HedaFox crying, and tried to ask him what's going on, but he went away.",
