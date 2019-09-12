@@ -1,5 +1,5 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  let messagecount = parseInt(args);
+  let messagecount = parseInt(args) + 1;
 message.channel.fetchMessages({ limit: messagecount })
   .then(messages => message.channel.bulkDelete(messages));
 };
