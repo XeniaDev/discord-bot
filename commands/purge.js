@@ -12,8 +12,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "ily", // The name of the command used to call it
-  category: "Fun", // The category the command fits in
-  description: "I'll be thankful!", // Short description of what the command does
-  usage: "ily" // An example of how to use the command
+  name: "purge", // The name of the command used to call it
+  category: "Moderation", // The category the command fits in
+  description: "Purging!", // Short description of what the command does
+  usage: "purging" // An example of how to use the command
 };
