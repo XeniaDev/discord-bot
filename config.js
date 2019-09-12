@@ -49,7 +49,7 @@ const config = {
     },
 
     { level: 3,
-      name: "Administrator",
+      name: "Staff",
       check: (message) => {
         try {
           const adminRole = message.guild.roles.find(r => r.name.toLowerCase() === message.settings.adminRole.toLowerCase());

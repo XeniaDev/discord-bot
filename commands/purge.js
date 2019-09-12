@@ -9,7 +9,7 @@ exports.conf = {
   enabled: true, // Whether this command is enabled
   guildOnly: false, // If the command can only be run in servers (No PM's)
   aliases: [], // Other ways to call the command
-  permLevel: "User" // The minimum permission needed to run the command
+  permLevel: "Staff" // The minimum permission needed to run the command
 };
 
 exports.help = {
