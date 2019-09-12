@@ -2,7 +2,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   let messagecount = parseInt(args) + 1;
 message.channel.fetchMessages({ limit: messagecount })
   .then(messages => message.channel.bulkDelete(messages));
-  message.reply(messagecount + " Messages successfully purged");
+  message.reply((messagecount - 1) + " Messages successfully purged");
 };
 
 exports.conf = {
