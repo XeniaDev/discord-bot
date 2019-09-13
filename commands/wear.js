@@ -12,20 +12,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     ":womans_hat:",
     ":crown:",
     ":dark_sunglasses:",
-    ":eyeglasses:",
-    ":avacado:",
-    ":dango:",
-    ":tomato:",
-    ":egg:",
-    ":potato:",
-    ":baby_bottle:",
-    ":beer:",
-    ":rat:",
-    ":christmas_tree:",
-    ":chestnut:",
-    ":lizard:",
-    ":shrimp:",
-    ":tangerine:"
+    ":eyeglasses:"
   );
   const item = items[Math.floor(Math.random() * items.length)];
   if (args.length === 0){ 
@@ -40,7 +27,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
         args = args.slice(1);
     }
 
-    message.reply(" **You put a "+item+" in "+client.users.get(args)+"'s mouth!**");
+    message.reply(" **You gave a "+item+" to "+client.users.get(args)+" to wear!**");
   }
 };
 
