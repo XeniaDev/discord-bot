@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   const items = Array(
-    ":woman_clothes:",
+    ":womans_clothes:",
     ":shirt:",
     ":jeans:",
     ":dress:",
