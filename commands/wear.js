@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     ":jeans:",
     ":dress:",
     ":kimono:",
-    ":high_hill:",
+    ":high_heel:",
     ":sandal: ",
     ":boot:",
     ":tophat:",
