@@ -1,24 +1,12 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  /*const items = Array(
-    ":womans_clothes:",
-    ":shirt:",
-    ":jeans:",
-    ":dress:",
-    ":kimono:",
-    ":high_heel:",
-    ":sandal: ",
-    ":boot:",
-    ":tophat:",
-    ":womans_hat:",
-    ":crown:",
-    ":dark_sunglasses:",
-    ":eyeglasses:"
-  );
-  const item = items[Math.floor(Math.random() * items.length)];
-  */
   if (args.length === 0){ 
     message.reply("You cannot wear the air");
     return;
+  }
+
+  let gender;
+  if (args[1]) {
+    gender = args[1];
   }
 
   if (args[0].startsWith('<@') && args[0].endsWith('>')) {
@@ -27,17 +15,43 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     if (args.startsWith('!')) {
         args = args.slice(1);
     }
-    const items = Array(
-    ":shirt:",
-    ":jeans:",
-    ":kimono:",
-    ":boot:",
-    ":tophat:",
-    ":crown:",
-    ":dark_sunglasses:",
-    ":eyeglasses:"
-  );
-  const item = items[Math.floor(Math.random() * items.length)];
+
+    let item;
+
+    const male_items = Array(
+      ":shirt:",
+      ":jeans:",
+      ":kimono:",
+      ":boot:",
+      ":tophat:",
+      ":crown:",
+      ":dark_sunglasses:",
+      ":eyeglasses:"
+    );
+
+    const female_items = Array(
+      ":womans_clothes:",
+      ":shirt:",
+      ":jeans:",
+      ":dress:",
+      ":kimono:",
+      ":high_heel:",
+      ":sandal:",
+      ":womans_hat:",
+      ":crown:",
+      ":dark_sunglasses:",
+      ":eyeglasses:"
+    );
+
+    if (gender === "male"){
+      item = male_items[Math.floor(Math.random() * male_items.length)];
+    } else if (gender === "female") {
+      item = female_items[Math.floor(Math.random() * female_items.length)];
+    } else {
+      const items = male_items.concat(female_items);
+      item = items[Math.floor(Math.random() * items.length)];
+    }
+
     message.reply(" **You gave a "+item+" to "+client.users.get(args)+" to wear!**");
   }
 };
