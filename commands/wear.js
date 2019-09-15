@@ -27,7 +27,6 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     if (args.startsWith('!')) {
         args = args.slice(1);
     }
-  if (args[1] == "male"){
     const items = Array(
     ":shirt:",
     ":jeans:",
@@ -40,25 +39,6 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   );
   const item = items[Math.floor(Math.random() * items.length)];
     message.reply(" **You gave a "+item+" to "+client.users.get(args)+" to wear!**");
-  }else if (args[1] == "female"){
-    const items = Array(
-    ":womans_clothes:",
-    ":shirt:",
-    ":jeans:",
-    ":dress:",
-    ":kimono:",
-    ":high_heel:",
-    ":sandal: ",
-    ":womans_hat:",
-    ":crown:",
-    ":dark_sunglasses:",
-    ":eyeglasses:"
-  );
-  const item = items[Math.floor(Math.random() * items.length)];
-    message.reply(" **You gave a "+item+" to "+client.users.get(args)+" to wear!**");
-  }else{
-    message.reply("...");
-  }
   }
 };
 
