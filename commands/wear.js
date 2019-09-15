@@ -57,23 +57,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   const item = items[Math.floor(Math.random() * items.length)];
     message.reply(" **You gave a "+item+" to "+client.users.get(args)+" to wear!**");
   }else{
-  const items = Array(
-    ":womans_clothes:",
-    ":shirt:",
-    ":jeans:",
-    ":dress:",
-    ":kimono:",
-    ":high_heel:",
-    ":sandal: ",
-    ":boot:",
-    ":tophat:",
-    ":womans_hat:",
-    ":crown:",
-    ":dark_sunglasses:",
-    ":eyeglasses:"
-  );
-  const item = items[Math.floor(Math.random() * items.length)];
-    message.reply(" **You gave a "+item+" to "+client.users.get(args)+" to wear!**");
+    message.reply("...");
   }
   }
 };
