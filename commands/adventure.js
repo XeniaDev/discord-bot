@@ -2,9 +2,9 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   const adventures = Array(" tried to take at look at the forest, but it's a burned one.",
       " Looked up at BayoDino, but She saw a big dragon, Both tried to runaway and they could.",
     " tried to help Haru climb the tree, but they couldn't and they fell down. Ouch!",
-    " Going to collect bunch of logs. He/She saw Khaos cannot find logs, gave the logs to her. so kindness.",
+    " Went to collect bunch of logs. They saw Khaos that she cannot find logs, they gave the logs to her. so kind.",
     "  found HedaFox crying, and tried to ask him what's going on, but he went away.",
-    " Suggested CayoDino to play with him. But he didn't accepted because his brother didn't allowed him, aww.",
+    " Suggested CayoDino to play with him. But he didn't accept because his brother didn't allow him, Ah.",
     " was running, but they didn't see Ergastolator and they fell down. It was just a small mistake."
   );
   const adventure = adventures[Math.floor(Math.random() * adventures.length)];
