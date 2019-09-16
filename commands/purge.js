@@ -1,6 +1,6 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  if(isNaN(args[0])) return;
   let messagecount = parseInt(args) + 1;
+  if(isNaN(messagecount)) return;
 message.channel.fetchMessages({ limit: messagecount })
   .then(messages => message.channel.bulkDelete(messages));
   message.reply((messagecount - 1) + " Messages successfully purged");
