@@ -5,7 +5,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   const dollar = (args[0] / 1000000);
   const frgem = (args[0] / 10000);
   const frtr = (args[0] / 10);
-  const cs = (args[0] * 0.00000016); //1 == 0.00000016
+  const cs = (args[0] * 0.0000016); //1 == 0.00000016
     message.channel.send(args[0]+" Worths: \n "+dollar+" USD \n "+frgem+" FR Gems \n "+frtr+" FR Treasure \n "+cs+" C$");
   }
 };
