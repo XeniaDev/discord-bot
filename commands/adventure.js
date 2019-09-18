@@ -8,8 +8,12 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     " tried to help "+beeb+" climb the tree, but they couldn't and they fell down. Ouch!",
     " Went to collect bunch of logs. Saw "+beeb+" that "+pron[beeb]+" cannot find logs, they gave the logs to "+pron2[beeb]+". so kind.",
     "  found "+beeb+" crying, and tried to ask "+pron[beeb]+" what's going on, but he went away.",
-    " Suggested "+beeb+" to play with "+pron2[beeb]+". But "+pron[beeb]+" didn't accept because their brother didn't allow "+pron2[beeb]+", Ah.",
-    " was running, but they didn't see "+beeb+" and they fell down. It was just a small mistake."
+    " Suggested "+beeb+" to play with. But "+pron[beeb]+" didn't accept because their brother didn't allow "+pron2[beeb]+", Ah.",
+    " was running, but they didn't see "+beeb+" and they fell down. It was just a small mistake.",
+    "Tried to drink water from lake But they fell down into the lake.",
+    "Zoomed one where. There was a diamond.",
+    "Called "+beeb+" but "+pron[beeb]+" Ignored them and went. reason for it?",
+    "Cryied to make Plague crows afraid but they came Near and tried to bite him/her. But he/she ranaway."
   );
   var adventure = adventures[Math.floor(Math.random() * adventures.length)];
   message.reply(adventure);
