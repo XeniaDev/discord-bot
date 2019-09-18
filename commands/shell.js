@@ -2,11 +2,15 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   if (!args.length) {
     return;
   } else {
+  if (isNaN(args[0])){
+      message.channel.send(args[0]+" Worths: \n "+args[0]+" USD \n "+args[0]+" FR Gems \n "+args[0]+" FR Treasure \n "+args[0]+" C$");
+  }else{
   const dollar = (args[0] / 1000000);
   const frgem = (args[0] / 10000);
   const frtr = (args[0] / 10);
   const cs = (args[0] * 0.000016); //1 == 0.00000016
     message.channel.send(args[0]+" Worths: \n "+dollar+" USD \n "+frgem+" FR Gems \n "+frtr+" FR Treasure \n "+cs+" C$");
+    }
   }
 };
 
