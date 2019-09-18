@@ -39,7 +39,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     if (args.startsWith('!')) {
         args = args.slice(1);
     }
-
+if (args[0] == "<@619791583805440000>"){ 
+    message.reply("*Runs Away...*");
+    return;
+  }
     message.reply(" **You put a "+food+" in "+client.users.get(args)+"'s mouth!**");
   }
 };
