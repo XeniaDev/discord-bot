@@ -18,8 +18,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "diamond", // The name of the command used to call it
+  name: "shell", // The name of the command used to call it
   category: "Informational", // The category the command fits in
-  description: "Getting ratio from usd, Flight rising gems, Flight rising tr and C$ with diamonds", // Short description of what the command does
-  usage: "diamond" // An example of how to use the command
+  description: "Getting ratio from usd, Flight rising gems, Flight rising tr and C$ with shells", // Short description of what the command does
+  usage: "shell" // An example of how to use the command
 };
