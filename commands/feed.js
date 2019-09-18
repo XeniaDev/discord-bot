@@ -13,7 +13,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     ":cheese:",
     ":pizza:",
     ":stew:",
-    ":avacado:",
+    ":avocado:",
     ":dango:",
     ":tomato:",
     ":egg:",
