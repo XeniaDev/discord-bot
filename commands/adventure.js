@@ -28,7 +28,7 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
 exports.conf = {
   enabled: true, // Whether this command is enabled
   guildOnly: false, // If the command can only be run in servers (No PM's)
-  aliases: [], // Other ways to call the command
+  aliases: ["adv"], // Other ways to call the command
   permLevel: "User" // The minimum permission needed to run the command
 };
 
