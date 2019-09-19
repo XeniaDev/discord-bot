@@ -16,7 +16,10 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     "Cried to make Plague crows afraid but they came Near and tried to bite him/her. But he/she ranaway.",
     "Sit on Cactuses.",
     "Went into the cave of fire dragons. got Burned face.",
-    "Zoomed at sun"
+    "Zoomed at sun",
+    "Pushed "+beeb+" into the Valley, but "+pron[beeb]+" fell on a frozen griffin. "+pron[beeb]+" was lucky enough.",
+    "Looked at "+beeb+"'s face, and said: *Aren't you familiar to me?*",
+    "Wanted to gather some stones. on Scorpion jumped on his/her hand"
   );
   var adventure = adventures[Math.floor(Math.random() * adventures.length)];
   message.reply(adventure);
