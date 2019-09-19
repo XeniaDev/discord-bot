@@ -11,9 +11,12 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     " Suggested "+beeb+" to play with. But "+pron[beeb]+" didn't accept because their brother didn't allow "+pron2[beeb]+", Ah.",
     " was running, but they didn't see "+beeb+" and they fell down. It was just a small mistake.",
     "Tried to drink water from lake But they fell down into the lake.",
-    "Zoomed one where. There was a diamond.",
+    "Zoomed aware, found something shiny. There was a diamond.",
     "Called "+beeb+" but "+pron[beeb]+" Ignored them and went. reason for it?",
-    "Cryied to make Plague crows afraid but they came Near and tried to bite him/her. But he/she ranaway."
+    "Cried to make Plague crows afraid but they came Near and tried to bite him/her. But he/she ranaway.",
+    "Sit on Cactuses.",
+    "Went into the cave of fire dragons. got Burned face.",
+    "Zoomed at sun"
   );
   var adventure = adventures[Math.floor(Math.random() * adventures.length)];
   message.reply(adventure);
