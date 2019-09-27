@@ -1,7 +1,7 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
   const combinedString = args.join(" ");
   const weirds = ["∀","ɐ","ᙠ","q","Ɔ","ɔ","ᗡ","p","Ǝ","ǝ","Ⅎ","ǝ","ɓ","⅁","ɓ","H","ɥ","I","ı","ſ","ɾ","⋊","ʞ","˥","l","W","ɯ","N","u","O","o","Ԁ","d","Ό","b","S","s","⊥","ʇ","∩","n","Λ","ʌ","M","ʍ","X","x","⅄","ʎ","Z","z"]
-  const splitMessage = combinedString.split("");
+  let splitMessage = combinedString.split("");
   splitMessage = weirds.slice(0);
   const reverseArray = splitMessage.reverse();
   const joinArray = reverseArray.join("");
