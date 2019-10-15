@@ -7,5 +7,5 @@ module.exports = async client => {
   client.user.setStatus("online");
 
   const channel = client.channels.get('619902581342208014');
-  channel.send(":eyes:");
+  channel.send("I won't send eyes again! Thank you for also posting eyes :eyes:");
 };
