@@ -26,7 +26,27 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     W: "M", w: "ʍ",
     X: "X", x: "x",
     Y: "⅄", y: "ʎ",
-    Z: "Z", z: "z"};
+    Z: "Z", z: "z",
+    ∀: "A", ɐ: "a",
+    ꓭ: "B",
+    Ɔ: "C", ɔ: "c",
+    ᗡ: "D",
+    Ǝ: "E", ǝ: "e",
+    Ⅎ: "F", ɟ: "F",
+    ⅁: "G", ɓ: "g",
+    ɥ: "h",
+    ᒋ: "J", ɾ: "j",
+    ꓘ: "K", ʞ: "k",
+    ⅂: "L",
+    W: "M", ɯ: "m",
+    Ԁ: "P",
+    Ό: "Q",
+    ꓤ: "R", ɹ: "r",
+    ꓕ: "T", ʇ: "t",
+    ∩: "U",
+    Λ: "V", ʌ: "v",
+    M: "W", ʍ: "w",
+    ⅄: "Y", ʎ: "t"};
   let splitMessage = combinedString.split("");
   for (let i = 0; i < splitMessage.length; i++) {
     if (weirds[splitMessage[i]] !== undefined) {
