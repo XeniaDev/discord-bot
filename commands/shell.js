@@ -3,7 +3,8 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     return;
   } else {
     if (isNumber(args[0])){
-      const number = args[0].replace(/\./g, '').replace(',', '.');
+      //const number = args[0].replace(/\./g, '').replace(',', '.');
+      const number = args[0].replace(/\./g, '').replace(',', '');
       const dollar = (number / 100000);
       const frgem = (number / 1000);
       const frtr = (number / 1);
