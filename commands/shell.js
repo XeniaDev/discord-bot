@@ -3,10 +3,11 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
     return;
   } else {
     if (isNumber(args[0])){
-      const dollar = (args[0] / 100000);
-      const frgem = (args[0] / 1000);
-      const frtr = (args[0] / 1);
-      const cs = (args[0] * 0.00016); //1 == 0.0000016
+      const number = args[0].replace(/\./g, '').replace(',', '.');
+      const dollar = (number / 100000);
+      const frgem = (number / 1000);
+      const frtr = (number / 1);
+      const cs = (number * 0.00016); //1 == 0.0000016
       message.channel.send(args[0]+" Worths: \n "+dollar+" USD \n "+frgem+" FR Gems \n "+frtr+" FR Treasure \n "+cs+" C$");
     } else {
       message.channel.send(args[0]+" Worths: \n "+args[0]+" USD \n "+args[0]+" FR Gems \n "+args[0]+" FR Treasure \n "+args[0]+" C$");
