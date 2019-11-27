@@ -2,14 +2,14 @@ exports.run = async (client, message, args, level) => { // eslint-disable-line n
   if (!args.length) {
     return;
   } else {
-  if (isNaN(args[0])){
+    if (isNumber(args[0])){
+      const dollar = (args[0] / 100000);
+      const frgem = (args[0] / 1000);
+      const frtr = (args[0] / 1);
+      const cs = (args[0] * 0.00016); //1 == 0.0000016
+      message.channel.send(args[0]+" Worths: \n "+dollar+" USD \n "+frgem+" FR Gems \n "+frtr+" FR Treasure \n "+cs+" C$");
+    } else {
       message.channel.send(args[0]+" Worths: \n "+args[0]+" USD \n "+args[0]+" FR Gems \n "+args[0]+" FR Treasure \n "+args[0]+" C$");
-  }else{
-  const dollar = (args[0] / 100000);
-  const frgem = (args[0] / 1000);
-  const frtr = (args[0] / 1);
-  const cs = (args[0] * 0.00016); //1 == 0.0000016
-    message.channel.send(args[0]+" Worths: \n "+dollar+" USD \n "+frgem+" FR Gems \n "+frtr+" FR Treasure \n "+cs+" C$");
     }
   }
 };
@@ -27,3 +27,8 @@ exports.help = {
   description: "Getting ratio from usd, Flight rising gems, Flight rising tr and C$ with shells", // Short description of what the command does
   usage: "shell" // An example of how to use the command
 };
+
+function isNumber(n) {
+    n = n.replace(/\./g, '').replace(',', '.');
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
