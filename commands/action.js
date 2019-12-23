@@ -1,35 +1,7 @@
 exports.run = async (client, message, args, level) => { // eslint-disable-line no-unused-vars
-  const foods = Array(
-    ":bug:",
-    ":ant:",
-    ":bee:",
-    ":scorpion:",
-    ":snake:",
-    ":cactus:",
-    ":four_leaf_clover: ",
-    ":pineapple:",
-    ":corn:",
-    ":lollipop:",
-    ":cheese:",
-    ":pizza:",
-    ":stew:",
-    ":avocado:",
-    ":dango:",
-    ":tomato:",
-    ":egg:",
-    ":potato:",
-    ":baby_bottle:",
-    ":beer:",
-    ":rat:",
-    ":christmas_tree:",
-    ":chestnut:",
-    ":lizard:",
-    ":shrimp:",
-    ":tangerine:"
-  );
-  const food = foods[Math.floor(Math.random() * foods.length)];
+
   if (args.length === 0){ 
-    message.reply("You cannot feed air");
+    message.reply("You cannot take an action with air");
     return;
   }
 
@@ -43,7 +15,20 @@ if (args[0] == "<@619791583805440000>"){
     message.reply("*Runs Away...*");
     return;
   }
-    message.reply(" **You put a "+food+" in "+client.users.get(args)+"'s mouth!**");
+    const acts = Array(
+    "Hugged",
+    "Looked up at",
+    "Zoomed up at",
+    "Gave a piece of Pizza to",
+    "Pushed",
+    "Hit",
+    "Slapped",
+    "Kissed",
+    "Said something to ",
+    "Gave 1000$ to",
+  );  
+    const act = acts[Math.floor(Math.random() * acts.length)];
+    message.reply(" **"+act+" "+client.users.get(args)+"!**");
   }
 };
 
