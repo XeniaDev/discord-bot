@@ -26,6 +26,7 @@ if (args[0] == "<@619791583805440000>"){
     "Kissed",
     "Said something to ",
     "Gave 1000$ to",
+    "Gave his/her PayPal password"
   );  
     const act = acts[Math.floor(Math.random() * acts.length)];
     message.reply(" **"+act+" "+client.users.get(args)+"!**");
