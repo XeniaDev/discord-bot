@@ -30,7 +30,11 @@ if (args[0] == "<@619791583805440000>"){
     "Smelled",
     "Installed GTA on a computer belongs to",
       "Smashed",
-      "Bite"
+      "Bite",
+      "cracked",
+      "Showed up His/Her hand to",
+      "Licked",
+      "Fixed"
   );  
     const act = acts[Math.floor(Math.random() * acts.length)];
     message.reply(" **"+act+" "+client.users.get(args)+"!**");
