@@ -26,7 +26,7 @@ if (args[0] == "<@619791583805440000>"){
     "Kissed",
     "Said something to ",
     "Gave 1000$ to",
-    "Gave his/her PayPal password",
+    "Gave his/her PayPal password to",
     "Smelled",
     "Installed GTA on a computer belongs to",
       "Smashed",
@@ -34,7 +34,16 @@ if (args[0] == "<@619791583805440000>"){
       "cracked",
       "Showed up His/Her hand to",
       "Licked",
-      "Fixed"
+      "Fixed",
+      "Ate",
+      "Killed",
+      "Slashed",
+      "Crashed",
+      "Damned",
+      "Petted",
+      "Touched",
+      "Threw water on",
+      "Threw confetti"
   );  
     const act = acts[Math.floor(Math.random() * acts.length)];
     message.reply(" **"+act+" "+client.users.get(args)+"!**");
