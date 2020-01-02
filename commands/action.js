@@ -43,7 +43,19 @@ if (args[0] == "<@619791583805440000>"){
       "Petted",
       "Touched",
       "Threw water on",
-      "Threw confetti"
+      "Threw confetti for",
+      "Bullied",
+      "Said something bad to",
+      "Liked",
+      "Loved",
+      "Hated",
+      "Carefully Zoomed up at",
+      "Splashed water on",
+      "Gifted",
+      "Jumped on",
+      "Restarted",
+      "Did something with",
+      "Cutted up"
   );  
     const act = acts[Math.floor(Math.random() * acts.length)];
     message.reply(" **"+act+" "+client.users.get(args)+"!**");
