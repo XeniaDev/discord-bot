@@ -6,7 +6,7 @@
   "dependencies": {
     "@discordjs/uws": "10.149.0",
     "@keyv/mysql": "^1.1.4",
-    "better-sqlite3": "^5.4.3",
+    "better-sqlite3": "^7.0.0",
     "bufferutil": "^4.0.0",
     "chalk": "^2.4.2",
     "discord.js": "^11.5.1",
