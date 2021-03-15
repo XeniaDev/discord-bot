@@ -12,7 +12,7 @@
     "discord.js": "^11.5.1",
     "enmap": "^5.1.2",
     "erlpack": "0.1.3",
-    "keyv": "^3.1.0",
+    "keyv": "^4.0.0",
     "moment": "^2.24.0",
     "node-opus": "^0.3.2",
     "opusscript": "^0.0.7",
