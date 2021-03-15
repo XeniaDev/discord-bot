@@ -4,7 +4,7 @@
   "description": "A Cranterns Discord bot",
   "main": "bayotest.js",
   "dependencies": {
-    "@discordjs/uws": "10.149.0",
+    "@discordjs/uws": "11.149.1",
     "@keyv/mysql": "^1.1.4",
     "better-sqlite3": "^5.4.3",
     "bufferutil": "^4.0.0",
