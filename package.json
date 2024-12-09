@@ -9,7 +9,7 @@
     "better-sqlite3": "^5.4.3",
     "bufferutil": "^4.0.0",
     "chalk": "^2.4.2",
-    "discord.js": "^11.5.1",
+    "discord.js": "^14.0.0",
     "enmap": "^5.1.2",
     "erlpack": "0.1.3",
     "keyv": "^4.0.0",
