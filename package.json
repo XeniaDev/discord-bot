@@ -27,7 +27,7 @@
     "start_local": "node -r dotenv/config bayo.js"
   },
   "engines": {
-    "node": "14.x",
+    "node": "22.x",
     "yarn": "^1.17.3"
   },
   "repository": {
