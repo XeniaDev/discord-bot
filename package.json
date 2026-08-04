@@ -5,7 +5,7 @@
   "main": "bayotest.js",
   "dependencies": {
     "@discordjs/uws": "11.149.1",
-    "@keyv/mysql": "^1.1.4",
+    "@keyv/mysql": "^2.0.0",
     "better-sqlite3": "^5.4.3",
     "bufferutil": "^4.0.0",
     "chalk": "^2.4.2",
